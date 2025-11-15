@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrettyLogger Preview</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #2d2d2d;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        .title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #61dafb;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+        }
+        .log-output {
+            background: #1e1e1e;
+            border: 1px solid #3e3e3e;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+        .log-line {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        .info {
+            color: #4ec9b0;
+        }
+        .debug {
+            color: #569cd6;
+        }
+        .error {
+            color: #f48771;
+        }
+        .warning {
+            color: #dcdcaa;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .section-title {
+            color: #61dafb;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .bg-info {
+            background-color: #4ec9b0;
+            color: #1e1e1e;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .bg-debug {
+            background-color: #569cd6;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .bg-error {
+            background-color: #f48771;
+            color: #1e1e1e;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .bg-warning {
+            background-color: #dcdcaa;
+            color: #1e1e1e;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">✨ PrettyLogger Preview ✨</div>
+        
+        <div class="section">
+            <div class="section-title">📝 Foreground Colors (Default)</div>
+            <div class="log-output">
+                <div class="log-line info">[2024-11-15T14:32:45.123456] [info] [MyApp]: Application started successfully</div>
+                <div class="log-line debug">[2024-11-15T14:32:45.234567] [debug] [Database]: Connecting to database at localhost:5432</div>
+                <div class="log-line warning">[2024-11-15T14:32:46.345678] [warning] [API]: Slow response detected - 2500ms</div>
+                <div class="log-line error">[2024-11-15T14:32:47.456789] [error] [Auth]: Failed to authenticate user - Invalid token</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🎨 Background Colors (Background Mode)</div>
+            <div class="log-output">
+                <div class="log-line" style="background-color: #4ec9b0; color: #1e1e1e; padding: 6px; margin: 8px 0;">[2024-11-15T14:32:45.123456] [info] [MyApp]: Application started successfully</div>
+                <div class="log-line" style="background-color: #569cd6; color: #fff; padding: 6px; margin: 8px 0;">[2024-11-15T14:32:45.234567] [debug] [Database]: Connecting to database at localhost:5432</div>
+                <div class="log-line" style="background-color: #dcdcaa; color: #1e1e1e; padding: 6px; margin: 8px 0;">[2024-11-15T14:32:46.345678] [warning] [API]: Slow response detected - 2500ms</div>
+                <div class="log-line" style="background-color: #f48771; color: #1e1e1e; padding: 6px; margin: 8px 0;">[2024-11-15T14:32:47.456789] [error] [Auth]: Failed to authenticate user - Invalid token</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🎯 Log Levels & Colors</div>
+            <div class="log-output">
+                <div style="margin: 10px 0;"><span class="bg-info">INFO</span> - Green: General information messages</div>
+                <div style="margin: 10px 0;"><span class="bg-debug">DEBUG</span> - Cyan: Debugging and diagnostic information</div>
+                <div style="margin: 10px 0;"><span class="bg-warning">WARNING</span> - Yellow: Warning messages that should be reviewed</div>
+                <div style="margin: 10px 0;"><span class="bg-error">ERROR</span> - Red: Error and exception messages</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
